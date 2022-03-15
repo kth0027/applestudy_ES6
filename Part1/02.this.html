@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div></div>
+    <button id="버튼">버튼</button>
+
+    <!-- <script>
+     console.log(this)
+
+     function 함수(){
+         console.log(this);
+     }
+
+     함수()
+ </script>    -->
+
+    <!-- <script>
+
+        console.log(this);
+
+        function 함수(){
+            console.log(this)
+        }
+
+        함수 ();
+        window.함수();
+
+
+        var 오브젝트 = {
+            data: {
+                함수: () => {
+                    console.log(this)
+                }
+            }
+
+        }
+
+        오브젝트.data.함수();
+
+        //  var 오브젝트1 = {
+        //      data : 'kim',
+        //      함수 : function(){
+        //          console.log('안녕')
+        //      }
+        //  }
+
+        // 오브젝트.함수();
+    </script> -->
+
+    <!-- <script>
+        var 어쩌구 = {}
+
+        function 기계(){
+            this.이름 = 'kim'
+        };
+
+        var 오브젝트 = new 기게();
+    </script> -->
+
+    <script>
+        document.getElementById('버튼').addEventListener('click', function(e){
+            // // 
+            // console.log(this);
+            // // 지금 이벤트 작동하는 곳
+            // console.log(e.currentTarget);
+
+            var 어레이 = [1,2,3];
+
+            어레이.forEach(function(a){
+                console.log(a);
+            })
+        });
+
+        var 오브젝트 = {
+            이름들 : ['김', '이', '박'],
+            함수 : function(){
+                오브젝트.이름들.forEach(()=>{
+                    console.log(this)
+                })
+            }
+        }
+
+        오브젝트.함수();
+        
+    </script>
+</body>
+
+</html>
