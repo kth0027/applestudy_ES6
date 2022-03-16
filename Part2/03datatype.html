@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>
+        var 이름1 = {name : '김'};
+        var 이름2 = 이름1;
+        이름1 = '박';
+        이름1.name = '박';
+        console.log(이름2);
+    </script> -->
+    <script>
+        // (인간의 시점)
+
+        var 이름1 = { name: '김' };
+        function 변경(obj) {
+            obj = { name: 'park' };
+        }
+        변경(이름1);
+
+
+
+        // (자바스크립트의 시점)
+
+        var 이름1 = { name: '김' };
+        function 변경(obj) {
+            obj = { name: 'park' };
+        }
+        // 변경(var obj = 이름1);
+    </script>
+    <script>
+        var 이름1 = { name: '김' };
+
+        function 변경(obj) {
+            obj = { name: 'park' };
+        }
+
+        변경(이름1);
+    </script>
+    <script>
+        var 이름1 = { name: '김' };
+
+        function 변경(obj) {
+            obj.name = 'park';
+        }
+
+        변경(이름1);
+        console.log(이름1);
+
+    </script>
+</body>
+
+</html>

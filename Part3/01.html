@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        var arr = [2,3,4];
+
+        var [a,b,c = 10] = [2,3];
+    </script> -->
+    <script type="module">
+        import {a} from '/Part3/library.js'
+        import {b} from '/Part3/library.js'
+        import c, * as 별명 from '/Part3/library.js'
+        console.log(a);
+        console.log(b);
+        console.log(c);
+
+        // 고전방식
+        var 임포트해온것들 = require('/Part3/library.js')
+    </script>
+</body>
+</html>

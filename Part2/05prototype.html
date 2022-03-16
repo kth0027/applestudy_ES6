@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>
+        function 기계() {
+            this.name = 'Kim';
+            this.age = 15;
+        }
+        기계.prototype.gender = '남';
+        var 학생1 = new 기계('Park');
+        var 학생2 = new 기계('Kim');
+
+        console.log(학생1.gender)
+    </script>
+    <script>
+        var arr = [1, 2, 3];
+        console.log(arr.toString()); //가능
+        // sort, push, toString, map, forEach 
+    </script> -->
+    <!-- <script>
+        function 기계() {
+            this.name = 'Kim';
+            this.age = 15;
+        }
+        기계.prototype.gender = '남';
+
+        var 학생1 = new 기계();
+        console.log(학생1.__proto__);
+        console.log(기계.prototype);
+
+        var 부모 = { name: 'Kim' };
+        var 자식 = {};
+
+        자식.__proto__ = 부모;
+        console.log(자식.name);
+    </script> -->
+    <script>
+        function Student(이름, 나이) {
+            this.name = 이름;
+            this.age = 나이;
+            this.sayHi = function () {
+                console.log('안녕 나는 ' + this.name + '이야');
+            }
+        }
+
+        var 학생1 = new Student('Kim', 20);
+        var 학생2 = new Student('Park', 21);
+        var 학생3 = new Student('Lee', 22);
+    </script>
+
+    <script>
+        function Parent() {
+            this.name = 'Kim';
+        }
+        var a = new Parent();
+
+        a.__proto__.name = 'Park';
+        console.log(a.name)
+    </script>
+
+    <script>
+        function Student(이름, 나이) {
+            this.name = 이름;
+            this.age = 나이;
+        }
+
+        Student.prototype.sayHi = () => {
+            console.log('안녕 나는 ' + this.name + '이야');
+        }
+        var 학생1 = new Student('Kim', 20);
+
+        학생1.sayHi(); //왜 이 코드가 제대로 안나오죠?
+
+        Student.prototype.sayHi = () => {
+            console.log(this);
+        }
+
+        var 오브젝트 = {
+            sayHi: () => { console.log(this) }
+        }
+        오브젝트.sayHi();
+    </script>
+
+    <script>
+        Array.prototype.remove3 = function () {
+            for (var i = 0; i < this.length; i++) {
+                if (this[i] === 3) {
+                    this.splice(i, 1);
+                }
+            }
+        };
+
+        var arr = [1, 2, 3, 4];
+        arr.remove3();
+
+        console.log(arr); //[1,2,4]
+    </script>
+</body>
+
+</html>
